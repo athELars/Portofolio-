@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arthur | Portfólio de Física</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Titillium+Web:wght@300;400;700&display=swap');
+        
+        :root {
+            --primary: #0f172a;
+            --secondary: #1e293b;
+            --accent: #7c3aed;
+        }
+        
+        body {
+            font-family: 'Titillium Web', sans-serif;
+            background-color: var(--primary);
+            color: white;
+            overflow-x: hidden;
+        }
+        
+        .hero-img {
+            background: radial-gradient(circle, rgba(31,41,55,0.8) 0%, rgba(15,23,42,1) 70%);
+        }
+        
+        .card {
+            background: rgba(30, 41, 59, 0.5);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(124, 58, 237, 0.3);
+        }
+        
+        .language-progress {
+            height: 6px;
+            background: rgba(255,255,255,0.1);
+        }
+        
+        .language-progress-fill {
+            height: 100%;
+            background: var(--accent);
+        }
+        
+        #particles-js {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
+        
+        .content-wrapper {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .typewriter h1 {
+            overflow: hidden;
+            border-right: 3px solid var(--accent);
+            white-space: nowrap;
+            margin: 0 auto;
+            letter-spacing: .10em;
+            animation: 
+                typing 3.5s steps(30, end),
+                blink-caret .75s step-end infinite;
+        }
+        
+        @keyframes typing {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        
+        @keyframes blink-caret {
+            from, to { border-color: transparent }
+            50% { border-color: var(--accent) }
+        }
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="content-wrapper">
+        <!-- Hero Section -->
+        <section class="hero-img min-h-screen flex items-center justify-center relative overflow-hidden">
+            <div class="container mx-auto px-6 py-16 z-10">
+                <div class="max-w-3xl mx-auto text-center">
+                    <div class="typewriter mb-8">
+                        <h1 class="text-4xl md:text-6xl font-bold mb-4">Olá, eu sou Arthur</h1>
+                    </div>
+                    <p class="text-xl md:text-2xl mb-8 opacity-90">Físico e pesquisador com foco em teorias avançadas e projetos inovadores</p>
+                    <div class="flex justify-center space-x-4">
+                        <a href="#about" class="px-6 py-3 bg-purple-600 hover:bg-purple-700 rounded-md font-medium transition">Sobre Mim</a>
+                        <a href="#skills" class="px-6 py-3 bg-transparent border border-white hover:bg-white hover:bg-opacity-10 rounded-md font-medium transition">Habilidades</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 bg-gradient-to-b from-slate-900 to-slate-800">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Sobre Mim</h2>
+                    <div class="w-20 h-1 bg-purple-600 mx-auto"></div>
+                </div>
+                
+                <div class="flex flex-col lg:flex-row items-center gap-12 max-w-6xl mx-auto">
+                    <div class="lg:w-1/3"></div>
+                    
+                    <div class="lg:w-2/3">
+                        <h3 class="text-2xl font-bold mb-6">Arthur, 15 anos</h3>
+                        <p class="text-lg mb-6">Físico interessado em trabalhar anonimamente para sua/suas teorias em geral e venda de projetos anônimos.</p>
+                        
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="card p-6 rounded-xl">
+                                <h4 class="text-xl font-semibold mb-4">Educação</h4>
+                                <ul class="space-y-3">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-graduation-cap text-purple-500 mt-1 mr-3"></i>
+                                        <span>9° Ano do Ensino Fundamental</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-atom text-purple-500 mt-1 mr-3"></i>
+                                        <span>Cursos: Física Quântica, EQD/QCD, Engenharia, Informática, Física Geral</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            
+                            <div class="card p-6 rounded-xl">
+                                <h4 class="text-xl font-semibold mb-4">Interesses</h4>
+                                <ul class="space-y-3">
+                                    <li class="flex items-start">
+                                        <i class="fas fa-microscope text-purple-500 mt-1 mr-3"></i>
+                                        <span>Pesquisa Teórica Avançada</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-project-diagram text-purple-500 mt-1 mr-3"></i>
+                                        <span>Desenvolvimento de Teorias e Modelos</span>
+                                    </li>
+                                    <li class="flex items-start">
+                                        <i class="fas fa-code text-purple-500 mt-1 mr-3"></i>
+                                        <span>Programação Científica</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20 bg-slate-800">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4">Habilidades</h2>
+                    <div class="w-20 h-1 bg-purple-600 mx-auto"></div>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <!-- Physics Skills -->
+                    <div class="card p-6 rounded-xl">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-atom text-2xl text-purple-500 mr-3"></i>
+                            <h3 class="text-xl font-semibold">Física Avançada</h3>
+                        </div>
+                        <ul class="space-y-3">
+                            <li>
+                                <div class="flex justify-between mb-1">
+                                    <span>Física Geral</span>
+                                    <span>95%</span>
+                                </div>
+                                <div class="language-progress rounded-full">
+                                    <div class="language-progress-fill rounded-full" style="width: 95%"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flex justify-between mb-1">
+                                    <span>EQD/QCD</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="language-progress rounded-full">
+                                    <div class="language-progress-fill rounded-full" style="width: 85%"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flex justify-between mb-1">
+                                    <span>Buracos Negros</span>
+                                    <span>88%</span>
+                                </div>
+                                <div class="language-progress rounded-full">
+                                    <div class="language-progress-fill rounded-full" style="width: 88%"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Programming Skills -->
+                    <div class="card p-6 rounded-xl">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-code text-2xl text-purple-500 mr-3"></i>
+                            <h3 class="text-xl font-semibold">Programação</h3>
+                        </div>
+                        <ul class="space-y-3">
+                            <li>
+                                <div class="flex justify-between mb-1">
+                                    <span>Python</span>
+                                    <span>75%</span>
+                                </div>
+                                <div class="language-progress rounded-full">
+                                    <div class="language-progress-fill rounded-full" style="width: 75%"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flex justify-between mb-1">
+                                    <span>Cálculos Científicos</span>
+                                    <span>85%</span>
+                                </div>
+                                <div class="language-progress rounded-full">
+                                    <div class="language-progress-fill rounded-full" style="width: 85%"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flex justify-between mb-1">
+                                    <span>Modelos Matemáticos</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="language-progress rounded-full">
+                                    <div class="language-progress-fill rounded-full" style="width: 90%"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Language Skills -->
+                    <div class="card p-6 rounded-xl">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-language text-2xl text-purple-500 mr-3"></i>
+                            <h3 class="text-xl font-semibold">Idiomas</h3>
+                        </div>
+                        <ul class="space-y-3">
+                            <li>
+                                <div class="flex justify-between mb-1">
+                                    <span>Português</span>
+                                    <span>100%</span>
+                                </div>
+                                <div class="language-progress rounded-full">
+                                    <div class="language-progress-fill rounded-full" style="width: 100%"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flex justify-between mb-1">
+                                    <span>Inglês</span>
+                                    <span>65%</span>
+                                </div>
+                                <div class="language-progress rounded-full">
+                                    <div class="language-progress-fill rounded-full" style="width: 65%"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flex justify-between mb-1">
+                                    <span>Espanhol</span>
+                                    <span>90%</span>
+                                </div>
+                                <div class="language-progress rounded-full">
+                                    <div class="language-progress-fill rounded-full" style="width: 90%"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flex justify-between mb-1">
+                                    <span>Alemão</span>
+                                    <span>40%</span>
+                                </div>
+                                <div class="language-progress rounded-full">
+                                    <div class="language-progress-fill rounded-full" style="width: 40%"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flex justify-between mb-1">
+                                    <span>Russo</span>
+                                    <span>40%</span>
+                                </div>
+                                <div class="language-progress rounded-full">
+                                    <div class="language-progress-fill rounded-full" style="width: 40%"></div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="flex justify-between mb-1">
+                                    <span>Japonês</span>
+                                    <span>20%</span>
+                                </div>
+                                <div class="language-progress rounded-full">
+                                    <div class="language-progress-fill rounded-full" style="width: 20%"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="py-20 bg-gradient-to-b from-slate-800 to-slate-900">
+            <div class="container mx-auto px-6">
+                <div class="max-w-2xl mx-auto text-center">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">Entre em Contato</h2>
+                    <p class="text-xl mb-8">Interessado em projetos colaborativos ou discussões teóricas?</p>
+                    
+                    <div class="card p-8 rounded-xl inline-block">
+                        <div class="flex flex-col items-center">
+                            <div class="w-20 h-20 rounded-full bg-purple-500 flex items-center justify-center mb-6">
+                                <i class="fas fa-user-secret text-3xl"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-2">Contato Anônimo</h3>
+                            <p class="mb-6">Discord: megatron0000000009</p>
+                            <div class="flex space-x-4">
+                                <a href="#" class="w-10 h-10 rounded-full bg-slate-700 hover:bg-purple-600 flex items-center justify-center transition">
+                                    <i class="fab fa-discord"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-slate-700 hover:bg-blue-600 flex items-center justify-center transition">
+                                    <i class="fab fa-telegram"></i>
+                                </a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-slate-700 hover:bg-gray-800 flex items-center justify-center transition">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="py-8 bg-slate-900 text-center">
+            <p>© 2023 Arthur. Todos os direitos reservados.</p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        // Particles.js configuration
+        particlesJS("particles-js", {
+            "particles": {
+                "number": {
+                    "value": 80,
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#7c3aed"
+                },
+                "shape": {
+                    "type": "circle",
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    }
+                },
+                "opacity": {
+                    "value": 0.5,
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 3,
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 40,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150,
+                    "color": "#7c3aed",
+                    "opacity": 0.4,
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 2,
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas",
+                "events": {
+                    "onhover": {
+                        "enable": true,
+                        "mode": "repulse"
+                    },
+                    "onclick": {
+                        "enable": true,
+                        "mode": "push"
+                    },
+                    "resize": true
+                },
+                "modes": {
+                    "repulse": {
+                        "distance": 100,
+                        "duration": 0.4
+                    },
+                    "push": {
+                        "particles_nb": 4
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
